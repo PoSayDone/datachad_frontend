@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+.wrapper {
+	height: 42px;
+	max-width: 700px;
+	border-radius: 100px;
+	display: flex;
+	align-items: center;
+	background: var(--secondary-bg);
+	user-select: none;
+	border: 1px solid var(--outline);
+}
+
+.icon {
+	margin-bottom: -1px;
+	padding-left: 12px;
+	font-size: 22px;
+}
+
+.input {
+	font-size: 16px;
+	margin-left: 12px;
+	width: 100%;
+	border: none;
+	background: none;
+}

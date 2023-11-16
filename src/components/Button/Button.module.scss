@@ -1,0 +1,85 @@
+.red {
+	background: var(--red);
+	color: var(--on-red);
+	border: 1px solid var(--on-red);
+
+	&:hover {
+		background: var(--light-red);
+	}
+	&:active {
+		background: var(--red);
+	}
+}
+
+.button.sm {
+	font-size: 0.75em;
+	height: 32px;
+	padding: 0 12px;
+}
+
+.button.md {
+	font-size: 0.75em;
+	height: 36px;
+	padding: 0 16px;
+}
+
+.button {
+	font-size: 0.8em;
+	font-weight: 500;
+	height: 42px;
+	padding: 0 20px;
+	border-radius: 100px;
+	border: 1px solid var(--outline);
+	background: var(--light-bg);
+	transition: background 0.1s ease;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	width: max-content;
+	white-space: nowrap;
+	justify-content: center;
+	&:hover {
+		background: var(--secondary-bg);
+	}
+}
+
+.chip {
+	font-weight: 500;
+	font-size: 0.75em;
+	height: 36px;
+	padding: 0 16px;
+	gap: 4px;
+}
+
+.select {
+	padding: 0px 10px 0px 16px;
+	gap: 8px;
+	span {
+		margin-bottom: -3px;
+		font-size: 1.6em;
+	}
+}
+
+.select.md {
+	padding: 0px 10px 0px 14px;
+	gap: 6px;
+	span {
+		line-height: 0.2%;
+		font-size: 1.6em;
+	}
+}
+
+.select.sm {
+	padding: 0px 8px 0px 12px;
+	gap: 6px;
+	span {
+		font-size: 1.4em;
+	}
+}
+
+.chip.closable {
+	padding: 0px 10px 0px 16px;
+	span {
+		font-size: 1.4em;
+	}
+}

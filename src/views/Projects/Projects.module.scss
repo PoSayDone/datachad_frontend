@@ -1,0 +1,31 @@
+.project {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--outline);
+	padding: 24px 0;
+}
+
+.project:first-child {
+	margin-top: -24px;
+}
+
+.text {
+	width: 260px;
+}
+
+.users {
+	margin-left: 50px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	user-select: none;
+}
+
+.more {
+	margin-left: auto;
+	float: right;
+	cursor: pointer;
+	background: none;
+	border: none;
+	user-select: none;
+}

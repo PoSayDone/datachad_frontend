@@ -1,0 +1,112 @@
+$table-border-radius: 30px;
+$header-cell-padding: 8px;
+$cell-padding: 20px;
+$row-height: 52px;
+
+.table {
+	border: 1px solid var(--outline);
+	border-radius: $table-border-radius;
+	width: 100%;
+	font-size: 0.8em;
+	font-weight: 500;
+	border-spacing: 0;
+	border-collapse: collapse;
+	overflow: clip;
+	border-style: hidden; /* hide standard table (collapsed) border */
+	box-shadow: 0 0 0 1px var(--outline); /* this draws the table border  */
+}
+
+.row:last-child {
+	border-bottom: none;
+	border-radius: 0 0 $table-border-radius $table-border-radius; /* Made the border-radius specific */
+}
+
+.header {
+	font-weight: 700;
+	border: none;
+	.cell {
+		background: none;
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		user-select: none;
+		padding: $header-cell-padding; /* Removed duplicate property */
+		border-radius: 8px;
+		transition: 0.1s background ease;
+		margin-left: 20px;
+
+		&:hover {
+			background: var(--secondary-bg);
+		}
+
+		span {
+			font-size: 18px;
+		}
+	}
+}
+
+.critical,
+.error,
+.warning {
+	> p {
+		padding: 6px 10px; /* Updated padding values */
+		border-radius: 10px;
+		width: min-content;
+		color: white; /* Changed to text color */
+	}
+}
+
+.critical {
+	> p {
+		background: var(--red);
+		color: var(--on-red);
+	}
+}
+
+.error {
+	> p {
+		background: var(--orange);
+		color: var(--on-orange);
+	}
+}
+
+.warning {
+	> p {
+		background: var(--yellow);
+		color: var(--on-yellow);
+	}
+}
+
+.pagination_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.pagination_buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.pages {
+	font-size: 16px;
+}
+
+.cell {
+	padding: 0 $cell-padding;
+}
+
+.row {
+	cursor: pointer;
+	padding: 0 30px;
+	height: $row-height;
+	border: 1px solid var(--outline-light);
+	transition: 0.1s background ease;
+	&:hover {
+		background: var(--light-bg);
+	}
+}

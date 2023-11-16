@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import './colors.scss';
+
+#chartJS {
+	image-rendering: optimizeSpeed; /* Older versions of FF */
+	image-rendering: -moz-crisp-edges; /* FF 6.0+ */
+	image-rendering: -webkit-optimize-contrast; /* Webkit (non standard naming) */
+	image-rendering: -o-crisp-edges; /* OS X & Windows Opera (12.02+) */
+	image-rendering: crisp-edges; /* Possible future browsers. */
+	-ms-interpolation-mode: nearest-neighbor; /* IE (non standard naming) */
+}
+
+:root {
+	font-size: 18px;
+}
+
+* {
+	font-family: 'JetBrains Mono', monospace;
+	letter-spacing: -0.04em;
+}
+
+body,
+html,
+#root {
+	min-width: 0;
+	width: 100%;
+}
+
+main {
+	margin-left: 216px;
+}
+
+h1 {
+	font-size: 3em;
+	font-weight: 500;
+	line-height: 0.9em;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+h2 {
+	font-size: 2em;
+	font-weight: 500;
+	line-height: 0.9em;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+}
+
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+// ul[class],
+// ol[class] {
+// 	padding: 0;
+// }
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+	list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+	transition: 0.1s background ease;
+	user-select: none;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+	padding: 60px;
+}
+
+.rdp {
+	--rdp-cell-size: 40px; /* Size of the day cells. */
+	--rdp-caption-font-size: 1em; /* Font size for the caption labels. */
+	--rdp-accent-color: var(--red); /* Accent color for the background of selected days. */
+	--rdp-background-color: var(
+		--light-red
+	); /* Background color for the hovered/focused elements. */
+	--rdp-accent-color-dark: var(
+		--on-red
+	); /* Accent color for the background of selected days (to use in dark-mode). */
+	--rdp-outline: 2px solid var(--rdp-accent-color); /* Outline border for focused elements */
+	--rdp-outline-selected: 3px solid var(--rdp-accent-color); /* Outline border for focused _and_ selected elements */
+	--rdp-selected-color: var(--on-red); /* Color of selected day text */
+}

@@ -1,0 +1,18 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 32px;
+}
+
+.user {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+}
+
+.avatar {
+	width: 56px;
+	height: 56px;
+	border-radius: 100%;
+	background: var(--secondary-bg);
+}

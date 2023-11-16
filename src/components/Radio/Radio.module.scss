@@ -1,0 +1,39 @@
+.group {
+	display: inline-flex;
+	gap: 20px;
+}
+
+.item {
+	display: block;
+	position: relative;
+	border-radius: 2px;
+}
+
+.input {
+	position: absolute;
+	opacity: 0;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.label {
+	cursor: pointer;
+	box-sizing: border-box;
+	font-style: normal;
+	color: var(--outline-light);
+	transition: 0.1s color ease-in-out;
+}
+
+.label:hover,
+.item[data-checked='true'] .label:hover {
+	color: var(--outline);
+}
+
+.item[data-checked='true'] .label {
+	&:hover {
+		color: var(--fg);
+	}
+	color: var(--fg);
+}
